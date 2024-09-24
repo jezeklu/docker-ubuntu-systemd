@@ -27,6 +27,7 @@ jobs:
       with:
         context: .
         push: true 
+        load: true # Ensures that the image is loaded locally after the build - for 'latest' tag
         tags: jezeklu/docker-ubuntu-systemd:${{ github.ref_name }}
 
     - name: Add latest tag
